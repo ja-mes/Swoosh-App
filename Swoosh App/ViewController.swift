@@ -12,9 +12,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var swoosh: UIImageView!
     @IBOutlet weak var BGImg: UIImageView!
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func unwindFromSkillVC(unwindSegue: UIStoryboardSegue) {
         
     }
 

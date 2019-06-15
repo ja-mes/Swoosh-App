@@ -47,6 +47,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Odf-i5-DuW" kind="show" id="cYE-gF-p3R"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="g29-j5-aRr">
                                 <rect key="frame" x="77.5" y="135" width="259.5" height="101"/>
@@ -129,6 +132,17 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C54-Ne-UbR">
+                                <rect key="frame" x="20" y="44" width="29" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="IAM-2N-pu3"/>
+                                    <constraint firstAttribute="width" constant="29" id="RoA-pg-RaF"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="uNs-AF-GQv" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="3Tr-MJ-8aw"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dfO-qc-uBb">
                                 <rect key="frame" x="20" y="205.5" width="374" height="190"/>
                                 <subviews>
@@ -180,7 +194,9 @@
                             <constraint firstItem="dfO-qc-uBb" firstAttribute="leading" secondItem="C9H-vn-M26" secondAttribute="leading" constant="20" id="Slj-z1-jrw"/>
                             <constraint firstItem="C9H-vn-M26" firstAttribute="trailing" secondItem="dfO-qc-uBb" secondAttribute="trailing" constant="20" id="T04-nJ-8H6"/>
                             <constraint firstItem="tat-m3-3UN" firstAttribute="leading" secondItem="C9H-vn-M26" secondAttribute="leading" constant="20" id="Tg5-Q1-TNH"/>
+                            <constraint firstItem="C54-Ne-UbR" firstAttribute="top" secondItem="C9H-vn-M26" secondAttribute="top" id="kdx-Ne-C6z"/>
                             <constraint firstItem="mfe-OL-2lT" firstAttribute="trailing" secondItem="C9H-vn-M26" secondAttribute="trailing" id="qkU-O7-Xpr"/>
+                            <constraint firstItem="C54-Ne-UbR" firstAttribute="leading" secondItem="C9H-vn-M26" secondAttribute="leading" constant="20" id="qlB-7i-jK1"/>
                             <constraint firstItem="C9H-vn-M26" firstAttribute="trailing" secondItem="tat-m3-3UN" secondAttribute="trailing" constant="20" id="uyY-M4-PyO"/>
                             <constraint firstItem="C9H-vn-M26" firstAttribute="trailing" secondItem="jq3-xa-FMy" secondAttribute="trailing" id="wAC-nv-6ag"/>
                         </constraints>
@@ -188,6 +204,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Uz-GG-7LF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="uNs-AF-GQv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="957.97101449275374" y="135.9375"/>
         </scene>
@@ -280,6 +297,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
